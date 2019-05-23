@@ -1,0 +1,22 @@
+[{
+        "host": "10.0.0.1",
+        "user": "admin",
+        "password": "",
+        "key": "",
+        "command": ["ls", "cat /etc/environment"]
+    },
+    {
+        "host": "10.0.0.2",
+        "user": "admin",
+        "password": "admin",
+        "key": "",
+        "command": ["ls", "cat /etc/environment"]
+    },
+    {
+        "host": "10.0.0.3",
+        "user": "test",
+        "password": "test",
+        "key": "",
+        "command": ["ls", "cat /etc/environment"]
+    }
+]
