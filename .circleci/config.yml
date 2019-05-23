@@ -6,5 +6,6 @@ jobs:
     working_directory: /go/src/github.com/anamake/maia
     steps:
       - checkout
+      - run: export GO111MODULE=on
       - run: go get -v -t -d ./...
       - run: go test -v ./...
