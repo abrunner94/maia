@@ -28,7 +28,3 @@ clean:
 	$(GOCLEAN)
 	rm -f *_linux
 	rm -f *_mac
-	
-
-
-
