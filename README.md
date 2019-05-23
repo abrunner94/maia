@@ -4,10 +4,10 @@ Maia is a CLI and management tool inspired by [pssh](https://pypi.org/project/ps
 
 ## Get Started
 
-If you would like to compile the binaries for yourself, you can either clone the repository or use `go get`.
+If you would like to compile the binaries for yourself, you can clone the repository.
 
 ```bash
-go get https://github.com/anamake/maia
+git clone https://github.com/anamake/maia.git
 ```
 
 There are also precompiled binaries available in the Releases section.
@@ -19,3 +19,31 @@ Maia was developed due to the constant hassle of checking on particular software
 #### How does it work?
 
 You can configure Maia to work with your machines by defining a `config.json` in the project's root directory. Maia will read the host names, user names, passwords, as well as any SSH keys from this configuration file and executes your user-defined commands remotely on these machines.
+
+#### Example
+
+```json
+[
+  {
+    "host": "10.0.0.1",
+    "user": "admin",
+    "password": "",
+    "key": "",
+    "command": ["ls", "cat /etc/environment"]
+  },
+  {
+    "host": "10.0.0.2",
+    "user": "admin",
+    "password": "admin",
+    "key": "",
+    "command": ["echo $(cat /etc/environment | grep local | cut -d ':' -f1)"]
+  },
+  {
+    "host": "10.0.0.3",
+    "user": "test",
+    "password": "test",
+    "key": "",
+    "command": ["ls", "cat /etc/environment"]
+  }
+]
+```
