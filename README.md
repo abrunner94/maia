@@ -18,7 +18,7 @@ Maia was developed due to the constant hassle of checking on particular software
 
 #### How does it work?
 
-You can configure Maia to work with your machines by defining a `config.json` in the project's root directory. Maia will read the host names, user names, passwords, as well as any SSH keys from this configuration file and executes your user-defined commands remotely on these machines.
+You can configure Maia to work with your machines by defining a `config.json` in the project's root directory. Maia will read the host names, user names, passwords, as well as any SSH keys from this configuration file and executes your user-defined commands remotely on these machines for you.
 
 #### Example
 
@@ -26,16 +26,16 @@ You can configure Maia to work with your machines by defining a `config.json` in
 [
   {
     "host": "10.0.0.1",
-    "user": "admin",
-    "password": "",
+    "user": "user",
+    "password": "ssh-password",
     "key": "",
     "command": ["ls", "cat /etc/environment"]
   },
   {
     "host": "10.0.0.2",
     "user": "admin",
-    "password": "admin",
-    "key": "",
+    "password": "",
+    "key": "/path/to/sshkey",
     "command": ["echo $(cat /etc/environment | grep local | cut -d ':' -f1)"]
   },
   {
@@ -43,7 +43,7 @@ You can configure Maia to work with your machines by defining a `config.json` in
     "user": "test",
     "password": "test",
     "key": "",
-    "command": ["ls", "cat /etc/environment"]
+    "command": ["netstat"]
   }
 ]
 ```
