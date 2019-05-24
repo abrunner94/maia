@@ -2,9 +2,8 @@ dist: xenial
 language: go
 env:
   - GO111MODULE=on
-  - GOFLAGS='-mod vendor'
 go:
-  - master
+  - 1.12
 notifications:
   email: false
 before_install:
