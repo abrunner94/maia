@@ -4,10 +4,30 @@ Maia is a CLI and management tool inspired by [pssh](https://pypi.org/project/ps
 
 ## Get Started
 
-If you would like to compile the binaries for yourself, you can clone the repository.
+If you would like to compile from source and generate the binaries yourself, first, clone the repository.
 
 ```bash
 git clone https://github.com/anamake/maia.git
+```
+
+Then, use make to generate a binary for your specific operating system:
+
+#### Linux
+
+```bash
+make build-linux
+```
+
+#### macOS
+
+```bash
+make build-mac
+```
+
+#### Windows
+
+```bash
+make build-win
 ```
 
 There are also precompiled binaries available in the Releases section.
