@@ -1,0 +1,13 @@
+dist: xenial
+language: go
+env:
+  - GO111MODULE=on
+go:
+  - 1.12
+notifications:
+  email: false
+before_install:
+  - go get -u golang.org/x/lint/golint
+script:
+  - go test -v -race ./...
+  - golint ./...

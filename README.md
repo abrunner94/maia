@@ -1,5 +1,7 @@
 # Maia
 
+[![Build Status](https://travis-ci.com/anamake/maia.svg?branch=master)](https://travis-ci.com/anamake/maia) [![Go Report Card](https://goreportcard.com/badge/github.com/anamake/maia)](https://goreportcard.com/report/github.com/anamake/maia)
+
 Maia is a CLI and management tool inspired by [pssh](https://pypi.org/project/pssh/), which allows you to execute commands remotely on multiple machines. This is particularly useful if you manage a fleet of machines on-prem and in the cloud, but don't necessarily want to install additional dependencies.
 
 ## Get Started
