@@ -7,11 +7,10 @@ go:
   - 1.12.x
 git:
   depth: 1
-install: true
 notifications:
   email: false
-before_script:
-  - go install github.com/golangci/golangci-lint/cmd/golangci-lint
+before_install:
+  - go get -u golang.org/x/lint/golint
 script:
-  - golangci-lint run
   - go test -v -race ./...
+  - golint ./...
