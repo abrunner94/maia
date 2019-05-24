@@ -30,10 +30,6 @@ type Connection struct {
 	SSHClient ssh.ClientConfig
 }
 
-func main() {
-	Run()
-}
-
 func Run() {
 	config := readConfig()
 
