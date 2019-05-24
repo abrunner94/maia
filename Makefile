@@ -1,8 +1,8 @@
 # Go parameters
 GOARCH=amd64
 GOBUILD=go build -o
-GOTEST=go test ./cmd/
-GOCLEAN=go clean ./cmd/
+GOTEST=go test -v -race ./...
+GOCLEAN=go clean ./...
 
 # Build parameters
 MAIA_LINUX=env GOOS=linux GOARCH=$(GOARCH)
