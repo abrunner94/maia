@@ -32,14 +32,10 @@ type Connection struct {
 
 func Run() {
 	config := readConfig()
-
-	// Loop over the credentials for SSH connection
 	for _, m := range config {
 		conn := createClient(m)
 		ssh := createConnection(*conn)
 		cmds := m.Command
-
-		// Create session and run commands
 		createSession(ssh, cmds)
 	}
 }
@@ -64,7 +60,6 @@ func readConfig() []Maia {
 }
 
 func createClient(m Maia) *Connection {
-	// No password, fall back to .pem file
 	var sshConfig ssh.ClientConfig
 
 	if m.Password == "" && m.Key != "" {
@@ -119,7 +114,6 @@ func createConnection(c Connection) *ssh.Client {
 }
 
 func createSession(client *ssh.Client, commands []string) {
-	// Run this in a goroutine and wait for outputs
 	join := strings.Join(commands, "; ")
 
 	sess, err := client.NewSession()
