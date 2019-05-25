@@ -1,8 +1,6 @@
 package main
 
-import (
-	maia "maia/internal/maia"
-)
+import "github.com/anamake/maia/internal/maia"
 
 func main() {
 	maia.Run()
