@@ -1,5 +1,7 @@
-[{
+[
+    {
         "host": "10.0.0.1",
+        "port": "2200",
         "user": "admin",
         "password": "",
         "key": "",
@@ -7,6 +9,7 @@
     },
     {
         "host": "10.0.0.2",
+        "port": "2201",
         "user": "admin",
         "password": "admin",
         "key": "",
@@ -14,6 +17,7 @@
     },
     {
         "host": "10.0.0.3",
+        "port": "2202",
         "user": "test",
         "password": "test",
         "key": "",
