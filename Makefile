@@ -25,7 +25,7 @@ MAIA_BUILD_LINUX=$(LINUX) $(MAIA_DIR)
 MAIA_BUILD_MAC=$(MAC) $(MAIA_DIR)
 MAIA_BUILD_WIN=$(WIN) $(MAIA_DIR)
 
-all: clean lint test build install
+all: clean test build install
 build: build-linux build-mac build-win
 build-mac:
 	$(MAIA_BUILD_MAC)
