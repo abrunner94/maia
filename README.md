@@ -63,6 +63,7 @@ You can configure Maia to work with your machines by defining a `config.json` in
 [
   {
     "host": "10.0.0.1",
+    "port": "22",
     "user": "user",
     "password": "ssh-password",
     "key": "",
@@ -70,6 +71,7 @@ You can configure Maia to work with your machines by defining a `config.json` in
   },
   {
     "host": "10.0.0.2",
+    "port": "22",
     "user": "admin",
     "password": "",
     "key": "/path/to/sshkey",
@@ -77,6 +79,7 @@ You can configure Maia to work with your machines by defining a `config.json` in
   },
   {
     "host": "10.0.0.3",
+    "port": "22",
     "user": "test",
     "password": "test",
     "key": "",
